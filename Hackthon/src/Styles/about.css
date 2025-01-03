@@ -1,45 +1,41 @@
-
-
 .about-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #00a1cc; /* Match the blue background */
+  /* background-color: #00a1cc; Match the blue background */
   padding: 3.125rem; /* 50px to rem */
   height: 100vh; /* Full screen height */
 }
-
+  
 .about-content {
   display: flex;
   align-items: center;
   max-width: 62.5rem; /* 1000px to rem */
   color: white;
 }
-
+  
 .about-image {
-  max-width: 18.75rem; /* 300px to rem */
-  margin-right: 1.875rem; /* 30px to rem */
+  max-width:25.75rem; /* 300px to rem */
+  margin-right: 1.875rem;
+  opacity: 0.25rem; /* 30px to rem */
 }
 
+  
 .about-text {
-  max-width: 600px;
-  margin-left: 0.2rem;
+  max-width: 37.5rem; /* 600px to rem */
 }
-
+  
 .about-text h2 {
-  font-size: 36px;
+  font-size: 2.25rem; /* 36px to rem */
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem; /* 20px to rem */
 }
-
+  
 .about-text p {
-  font-size: 18px;
+  font-size: 1.125rem; /* 18px to rem */
   line-height: 1.8;
-  text-align: justify; /* Added to justify the content */
 }
-
+  
 .about-text strong {
   font-weight: bold;
 }
-
-

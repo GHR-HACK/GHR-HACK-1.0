@@ -40,7 +40,7 @@ function Team() {
 
             <h2 className="text-2xl sm:text-3xl font-bold mt-10 text-left ms-10 ps-10 text-white">TECHNICAL</h2>
             <div className="text-center">
-                <div className="w-40 h-40 sm:w-60 sm:h-60 rounded-full mx-auto"><img className="rounded-full" src={Mayur}/></div>
+                <div className="w-40 h-40 sm:w-60 sm:h-60 rounded-full mx-auto">{Mayur}</div>
                 <h3 className="text-lg sm:text-xl font-bold mt-4">Mayur Nikumbh</h3>
                 <p className="text-md sm:text-lg">Head Coordinator</p>
             </div>

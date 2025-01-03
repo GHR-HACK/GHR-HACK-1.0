@@ -1,106 +1,38 @@
 
-import { useEffect, useRef } from "react";
 import "../Styles/Contact.css";
 
 const Contact = () => {
-    const leftSectionRef = useRef(null);
-    const rightSectionRef = useRef(null);
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("show");
-                    } else {
-                        entry.target.classList.remove("show");
-                    }
-                });
-            },
-            { threshold: 0.1 }
-        );
-
-        if (leftSectionRef.current) observer.observe(leftSectionRef.current);
-        if (rightSectionRef.current) observer.observe(rightSectionRef.current);
-
-        return () => {
-            if (leftSectionRef.current) observer.unobserve(leftSectionRef.current);
-            if (rightSectionRef.current) observer.unobserve(rightSectionRef.current);
-        };
-    }, []);
-
     return (
-        <div className="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-12 p-4 min-h-screen">
-            {/* Left Section */}
-            <div
-                ref={leftSectionRef}
-                className="text-white text-center md:text-left transition-opacity opacity-0 transform -translate-x-10"
-            >
-                <h1 className="text-5xl font-bold mb-6 drop-shadow-lg">CONTACT US</h1>
-                <p className="text-xl mb-6 drop-shadow-md">I AM INTERESTED IN:</p>
-                <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-                    {["Participating", "Collaboration", "Sponsorship", "Helping", "Event"].map((item) => (
-                        <button
-                            key={item}
-                            className="transform Cursor2 px-6 py-3 border border-white rounded-full bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white shadow-lg hover:scale-110 hover:shadow-2xl transition duration-300 ease-out"
-                        >
-                            {item}
-                        </button>
-                    ))}
+        <div className="bg-[#011947] flex flex-col md:flex-row items-center justify-center space-y-1 md:space-y-0 md:space-x-8 p-2 min-h-screen">
+            <div className="text-white">
+                <h1 className="text-4xl font-bold mb-4">CONTACT US</h1>
+                <p className="text-lg mb-4">I AM INTERESTED IN:</p>
+                <div className="flex flex-wrap gap-4 Cursor2">
+                    <button className="Cursor2 px-4 py-2 border border-white rounded-full">Participating</button>
+                    <button className="Cursor2 px-4 py-2 border border-white rounded-full">Collaboration</button>
+                    <button className="Cursor2 px-4 py-2 border border-white rounded-full">Sponsorship</button>
+                    <button className="Cursor2 px-4 py-2 border border-white rounded-full">Helping</button>
+                    <button className="Cursor2 px-4 py-2 border border-white rounded-full">Event</button>
                 </div>
             </div>
-
-            {/* Right Section */}
-            <div
-                ref={rightSectionRef}
-                className="bg-white p-8 rounded-lg shadow-2xl w-full max-w-md transition-opacity opacity-0 transform translate-x-10"
-            >
-                <form className="space-y-6">
+            <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+                <form className="space-y-4">
                     <div className="flex space-x-4">
-                        <input
-                            className="Cursor2 w-1/2 p-3 border-b border-gray-300 focus:outline-none focus:border-purple-600 text-gray-900 shadow-inner"
-                            placeholder="Full Name*"
-                            type="text"
-                        />
-                        <input
-                            className="Cursor2 w-1/2 p-3 border-b border-gray-300 focus:outline-none focus:border-purple-600 text-gray-900 shadow-inner"
-                            placeholder="Email*"
-                            type="email"
-                        />
+                        <input className="Cursor2 w-1/2 p-2 border-b border-gray-300 focus:outline-none text-gray-900" placeholder="Full Name*" type="text" />
+                        <input className="Cursor2 w-1/2 p-2 border-b border-gray-300 focus:outline-none text-gray-900" placeholder="Email*" type="email" />
                     </div>
-                    <div className="flex items-center space-x-2">
-                        <img
-                            alt="Indian flag"
-                            className="w-7 h-5"
-                            src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/510px-Flag_of_India.svg.png"
-                            width="25"
-                            height="20"
-                        />
-                        <input
-                            className="Cursor2 w-full p-3 border-b border-gray-300 focus:outline-none focus:border-purple-600 text-gray-900 shadow-inner"
-                            placeholder="+91 Phone Number*"
-                            type="text"
-                        />
+                    <div className="flex items-center space-x-2 Cursor2">
+                        <img alt="Indian flag" className="w-7 h-5" height="20" src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/510px-Flag_of_India.svg.png" width="25" />
+                        <input className="Cursor2 w-full p-2 border-b border-gray-300 focus:outline-none text-gray-900" placeholder="+91 Phone Number*" type="text" />
                     </div>
-                    <textarea
-                        className="Cursor2 w-full p-3 border-b border-gray-300 focus:outline-none focus:border-purple-600 text-gray-900 shadow-inner"
-                        placeholder="Leave us a message"
-                    ></textarea>
+                    <textarea className="Cursor2 w-full p-2 border-b border-gray-300 focus:outline-none text-gray-900" placeholder="Leave us a message"></textarea>
                     <div className="flex items-center space-x-2">
-                        <input className="Cursor2 form-checkbox transform scale-110" type="checkbox" />
+                        <input className="Cursor2 form-checkbox" type="checkbox" />
                         <label className="Cursor2 text-sm text-gray-900">
-                            I have read &amp; I agree to the{" "}
-                            <a className="text-purple-600 underline hover:text-purple-800" href="#">
-                                privacy policy.
-                            </a>
+                            I have read &amp; I agree to the <a className="text-purple-600" href="#">privacy policy.</a>
                         </label>
                     </div>
-                    <button
-                        className="Cursor2 w-full bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white py-3 rounded-full shadow-lg transform hover:scale-110 hover:shadow-2xl transition duration-300 ease-out"
-                        type="submit"
-                    >
-                        Submit
-                    </button>
+                    <button className="Cursor2 w-full bg-purple-600 text-white py-2 rounded-full" type="submit">Submit</button>
                 </form>
             </div>
         </div>
