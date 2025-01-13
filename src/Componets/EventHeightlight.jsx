@@ -1,60 +1,10 @@
-import React, { useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import React, { useRef } from "react";
 import "../Styles/EventHighlights.css";
 import mantaRayImage from "../assets/images/manta-ray.png";
 
 const EventHighlights = () => {
   const imageRef = useRef(null);
   const textRef = useRef(null);
-
-  useEffect(() => {
-    const isSmallScreen = window.innerWidth <= 768;
-
-    if (!isSmallScreen) {
-      gsap.registerPlugin(ScrollTrigger);
-
-      gsap.fromTo(
-        imageRef.current,
-        {
-          opacity: 0,
-          x: 200,
-          rotationY: -45,
-        },
-        {
-          opacity: 1,
-          x: 0,
-          rotationY: 0,
-          scrollTrigger: {
-            trigger: imageRef.current,
-            start: "top 80%",
-            end: "bottom 20%",
-            scrub: true,
-          },
-        }
-      );
-
-      gsap.fromTo(
-        textRef.current,
-        {
-          opacity: 0,
-          x: -200,
-          rotationY: 45,
-        },
-        {
-          opacity: 1,
-          x: 0,
-          rotationY: 0,
-          scrollTrigger: {
-            trigger: textRef.current,
-            start: "top 80%",
-            end: "bottom 20%",
-            scrub: true,
-          },
-        }
-      );
-    }
-  }, []);
 
   return (
     <div className="highlights-container font-[Ghr4]">

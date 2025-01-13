@@ -1,4 +1,4 @@
-import  { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "../Styles/about.css";
@@ -13,18 +13,16 @@ const AboutSection = () => {
     // Register ScrollTrigger plugin
     gsap.registerPlugin(ScrollTrigger);
 
-    // Animation for the image (coming from left)
+    // Fade-in animation for the image
     gsap.fromTo(
       imageRef.current,
       {
         opacity: 0,
-        x: -200, // Start from the left
-        rotationY: 45,
+        y: -50, // Start position (50px above)
       },
       {
         opacity: 1,
-        x: 0,
-        rotationY: 0,
+        y: 0, // End position (original position)
         scrollTrigger: {
           trigger: imageRef.current,
           start: "top 80%", // When the top of the element is at 80% of the viewport
@@ -34,18 +32,16 @@ const AboutSection = () => {
       }
     );
 
-    // Animation for the text (coming from right)
+    // Fade-in animation for the text
     gsap.fromTo(
       textRef.current,
       {
         opacity: 0,
-        x: 200, // Start from the right
-        rotationY: -45,
+        y: -50, // Start position (50px above)
       },
       {
         opacity: 1,
-        x: 0,
-        rotationY: 0,
+        y: 0, // End position (original position)
         scrollTrigger: {
           trigger: textRef.current,
           start: "top 80%", // When the top of the element is at 80% of the viewport
