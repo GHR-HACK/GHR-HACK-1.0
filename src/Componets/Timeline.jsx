@@ -1,5 +1,4 @@
-import React from "react";
-import TimelineImage from "../assets/Timeline/Date Line.png"; 
+import TimelineImage from "../assets/Timeline/Date.png"; 
 
 const RegistrationTimeline = () => {
   return (
