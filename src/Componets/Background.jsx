@@ -2,10 +2,11 @@ import VideoBG from "../assets/Background.mp4";
 import Home from "./Home";
 import Navbar from "./Navbar";
 import Buttons from "./Buttons";
+import Banner from "./Banner";
 
 const Background = () => {
   return (
-    <div className="App relative overflow-hidden h-screen w-screen">
+    <div  className="App relative overflow-hidden h-screen w-screen">
       {/* Video Background */}
       <video
         autoPlay
@@ -23,9 +24,10 @@ const Background = () => {
 
       {/* Navbar */}
       <Navbar />
+      <Banner />
 
       {/* Home Component */}
-      <div className="relative z-10">
+      <div id="#home" className="relative z-10">
         <Home />
         <Buttons />
       </div>
