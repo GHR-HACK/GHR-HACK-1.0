@@ -1,8 +1,8 @@
 /* Base styles for the About section */
 .about-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content:center;
+  align-items: right;
   background: linear-gradient(to bottom,#00A6D2, #0e7490 );
   padding: 3.125rem; /* 50px to rem */
   height: 100vh; /* Full screen height */
@@ -47,7 +47,7 @@
 .about-text p {
   font-size: 1.125rem; /* 18px to rem */
   line-height: 1.8;
-  text-align: Center;
+  text-align: justify;
   letter-spacing: 0.5px;
 }
 
@@ -59,14 +59,15 @@
 /* Mobile styling */
 @media screen and (max-width: 768px) {
   .about-container {
-    padding: 2rem 1rem; /* 20px to rem */
+    padding: 7rem 3rem; /* 20px to rem */
     height: auto; /* Adjust height for smaller screens */
     transform: none; /* Remove 3D transformation */
     transition: none;
 
   }
-.Heading{
+.about-container h2{
   color: white;
+  text-align: center;
 }
   .about-content {
     flex-direction: column;
