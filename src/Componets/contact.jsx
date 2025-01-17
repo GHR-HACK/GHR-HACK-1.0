@@ -1,7 +1,9 @@
 
 import { useEffect, useRef } from "react";
 import "../Styles/Contact.css";
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
+import PrivacyPolicy from "./PrivacyPolicy";
+import { useNavigate } from "react-router-dom";
 
 const Contact = () => {
     const leftSectionRef = useRef(null);
@@ -10,7 +12,7 @@ const Contact = () => {
         event.preventDefault();
         const formData = new FormData(event.target);
     
-        formData.append("access_key", "e108f34a-457b-49b3-8387-447a22d1e6ec");
+        formData.append("access_key", "f0acc6a6-2895-4796-8c2c-d84817d34e6a");
     
         const object = Object.fromEntries(formData);
         const json = JSON.stringify(object);
@@ -120,10 +122,10 @@ const Contact = () => {
                         required
                     ></textarea>
                     <div className="flex items-center space-x-2">
-                        <input className="Cursor2 form-checkbox transform scale-110" type="checkbox" />
+                        <input className="Cursor2 form-checkbox transform scale-110" required type="checkbox" />
                         <label className="Cursor2 text-sm text-gray-900">
                             I have read &amp; I agree to the{" "}
-                            <a className="text-purple-600 underline hover:text-purple-800" href="#">
+                            <a className="text-purple-600 underline hover:text-purple-800"  href="#">
                                 privacy policy.
                             </a>
                         </label>

@@ -67,7 +67,7 @@
   }
 .about-container h2{
   color: white;
-  text-align: center;
+  text-align: right;
 }
   .about-content {
     flex-direction: column;
@@ -87,12 +87,12 @@
   }
 
   .about-text h2 {
-    font-size: 1.75rem; /* Adjust heading size */
-    margin-bottom: 1rem; /* Adjust margin */
+    font-size: 1.75rem; 
+    margin-bottom: 1rem; 
   }
 
   .about-text p {
-    font-size: 0.5rem;
-    padding-bottom: 1rem; /* Adjust paragraph size */
+    font-size: 0.75rem;
+    padding-bottom: 1rem; 
   }
 }
