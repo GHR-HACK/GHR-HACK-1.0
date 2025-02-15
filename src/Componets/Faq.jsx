@@ -12,7 +12,7 @@ const FAQ = () => {
     { question: "Who can participate ?", answer: "The hackathon is open to all BE/Btech, BCA, MCA, BSc(CS), and postgraduate students as well." },
     { question: "When and How the team will be shortlisted?", answer: "The team shortlisting starts on 11th February 2025 on individuals resume, profile and innovative idea abstract provided by them." },
     { question: "Does the hackathon include accomodation and meals for the participants?", answer: "Yes, accomodation and meals for 2 days are provided free of cost for all participants." },
-    { question: "Does GHR-HACK provide Internet facility during hackathon?", answer: "Yes, we provide a high-speed internet connection for all participants." },
+    { question: "Does GHRhack provide Internet facility during hackathon?", answer: "Yes, we provide a high-speed internet connection for all participants." },
     
 
   ];
@@ -24,7 +24,7 @@ const FAQ = () => {
   return (
     <div id="FAQ" className="faq  bg-[#011947]">
     <div className="faq-container bg-[#011947]">
-       <h1 className="text-center font-[Ghr4] uppercase leading-[1] text-4xl text-white">FAQ's</h1>
+       <h1 className="text-center font-[Ghr4] uppercase leading-[1] text-4xl text-white">FAQ'<span className="lowercase">s</span></h1>
       <ul className="faq-list cursor2">
         {faqs.map((faq, index) => (
           <li key={index} className={`faq-item ${openIndex === index ? "open" : ""}`}>
