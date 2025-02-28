@@ -15,9 +15,17 @@ import RegistrationTimeline from './Componets/Timeline'
 import Video from './Componets/Video'
 import { Analytics } from "@vercel/analytics/react"
 import Mentors from './Componets/Mentors'
+import Lenis from 'lenis'
+
+
+
 
 
 function App() {
+
+
+  
+
   return (
     <div className='App' >
     <Background />
